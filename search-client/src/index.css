@@ -1,0 +1,127 @@
+:root {
+	--background-color-1: #fff;
+	--background-color-2: #eee;
+	--background-color-3: #ccc;
+	--background-color-4: #bbb;
+	--text-color-1: #111;
+	--text-color-2: #555;
+	--highlight-color-1: #0856a3;
+	--highlight-color-2: #074583;
+	--error-color: #a00;
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color-1: #222;
+		--background-color-2: #333;
+		--background-color-3: #555;
+		--background-color-4: #666;
+		--text-color-1: #fff;
+		--text-color-2: #bbb;
+		--highlight-color-1: #72b3f3;
+		--highlight-color-2: #92c0ef;
+		--error-color: #d66;
+	}
+}
+
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: 'Helvetica Neue', 'Arial', sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: var(--background-color-1);
+	color: var(--text-color-1);
+}
+
+h1 {
+	display: contents;
+	margin: 0 10px 0 0;
+	font-size: 1.7em;
+}
+
+h2 {
+	margin: 0 0 5px 0;
+	font-size: 1.5em;
+}
+
+h3 {
+	margin: 0 0 15px 0;
+	font-size: 1em;
+}
+
+a {
+	color: var(--highlight-color-1);
+	text-decoration: none;
+}
+
+button {
+	margin: 1px 5px 1px 0;
+	padding: 6px 10px;
+	height: 36px;
+	font-size: 1em;
+	color: var(--text-color-1);
+	background-color: var(--background-color-3);
+	border: 1px solid var(--background-color-3);
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+button:hover {
+	background-color: var(--background-color-4);
+	border: 1px solid var(--background-color-4);
+}
+
+button:active {
+	background-color: var(--background-color-3);
+	border: 1px solid var(--background-color-1);
+}
+
+button[type="submit"] {
+	background-color: var(--highlight-color-1);
+	border: 1px solid var(--highlight-color-1);
+	color: var(--background-color-1);
+}
+
+button[type="submit"]:hover {
+	background-color: var(--highlight-color-2);
+	border: 1px solid var(--highlight-color-2);
+}
+
+button[type="submit"]:active {
+	background-color: var(--highlight-color-1);
+	border: 1px solid var(--background-color-1);
+}
+
+button:disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+button.link {
+	padding: 5px 0;
+	margin: 0;
+    background: none;
+    color: var(--highlight-color-1);
+	border-width: 0;
+}
+
+button.link:hover  {
+    background: none;
+	border-width: 0;
+}
+
+hr {
+	border: 0.5px solid var(--background-color-4);
+	margin: 15px 0;
+}
+
+.App {
+	padding: 20px 0;
+}
+
+@media (min-width: 750px) {
+	.App {
+		padding: 20px 10vw;
+	}
+  }

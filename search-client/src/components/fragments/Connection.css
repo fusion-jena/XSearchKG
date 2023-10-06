@@ -1,0 +1,77 @@
+.Connection {
+	display: flex;
+	width: 100%;
+	position: relative;
+}
+
+.Connection.expandable,
+.Connection.Connection.expanded {
+	margin: 5px 0;
+	padding: 10px 0;
+}
+
+.Connection.expanded {
+	background-color: var(--background-color-3);
+	border-radius: 4px;
+}
+
+.Connection .closeConnection {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	padding: 2px;
+	color: var(--text-color-2);
+	cursor: pointer;
+	z-index: 2;
+}
+
+.Connection .actions {
+	padding: 0px 5px;
+	white-space: nowrap;
+}
+
+.Connection .actions svg {
+	padding: 0px 1px;
+    color: var(--highlight-color-1);
+	cursor: pointer;
+}
+
+.Connection .counter {
+	min-width: 40px;
+	display: flex;
+	white-space: nowrap;
+	align-items: center;
+	height: 20px;
+	background-color: var(--background-color-3);
+	padding: 0 5px;
+	border: 0;
+	border-radius: 4px;
+	font-size: 0.8em;
+}
+
+.Connection .content {
+	overflow: scroll;
+}
+
+.Connection .bindings {
+	overflow: scroll;
+}
+
+.Connection .binding {
+	display: flex;
+	white-space: nowrap;
+	margin: 0 0 5px 0;
+}
+
+.Connection .target {
+	font-weight: bold;
+}
+
+.Connection .edge {
+	color: var(--text-color-2);
+}
+
+.Connection .comment {
+	margin: 10px 0;
+	font-style: italic;
+}

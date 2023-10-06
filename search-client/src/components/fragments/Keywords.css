@@ -1,0 +1,8 @@
+.Keywords {
+	width: 100%;
+	max-width: 450px;
+}
+
+.Keywords .nooptions {
+	color: var(--error-color)
+}

@@ -1,0 +1,58 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "@type": "SoftwareSourceCode",
+    "license": "https://spdx.org/licenses/MIT",
+    "codeRepository": "https://github.com/fusion-jena/XSearchKG",
+    "dateCreated": "2023-10-06",
+    "datePublished": "2023-10-06",
+    "dateModified": "2023-10-06",
+    "downloadUrl": "",
+    "issueTracker": "https://github.com/fusion-jena/XSearchKG/issues",
+    "name": "XSearchKG",
+    "version": "1.0.0",
+    "identifier": "",
+    "description": "Source code for XSearchKG, a full-stack web application for explainable keyword search over knowledge graphs",
+    "referencePublication": "",
+    "funder": {},
+    "keywords": [
+        "Explainability",
+        "Keyword Search",
+        "Knowledge Graph"
+    ],
+    "programmingLanguage": [
+        "JavaScript"
+    ],
+    "runtimePlatform": [
+        "nodejs"
+    ],
+    "softwareRequirements": [
+        "node version >= v14.16.1"
+    ],
+    "relatedLink": [
+      "https://doi.org/10.5281/zenodo.8414093"
+    ],
+    "author": [
+      {
+          "@type": "Person",
+          "@id": "https://orcid.org/0009−0008−2589−6532",
+          "givenName": "Martin",
+          "familyName": "Birke",
+          "email": "Martin.Birke@uni-jena.de",
+          "affiliation": {
+              "@type": "Organization",
+              "name": "Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena, Jena, Germany"
+          }
+      },
+        {
+            "@type": "Person",
+            "@id": "https://orcid.org/0000-0001-8896-8208",
+            "givenName": "Leila",
+            "familyName": "Feddoul",
+            "email": "Leila.Feddoul@uni-jena.de",
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Heinz Nixdorf Chair for Distributed Information Systems, Friedrich Schiller University Jena, Jena, Germany"
+            }
+        }
+    ]
+}

@@ -1,0 +1,17 @@
+.SearchForm {
+	margin: 20px 10px;
+}
+
+.SearchForm .inputContainer {
+	display: flex;
+	flex-flow: row wrap;
+}
+
+.SearchForm .inputContainer>button {
+	margin: 6px 5px 0 0;
+	width: 50px;
+}
+
+.SearchForm .inputContainer>div {
+	margin: 5px 5px 0 0;
+}

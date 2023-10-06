@@ -1,0 +1,8 @@
+.LoadingMessage {
+	margin: 10px;
+	display: flex;
+}
+
+.LoadingMessage .label {
+	margin-right: 10px;
+}

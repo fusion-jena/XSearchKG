@@ -1,0 +1,13 @@
+.ConnectingNode {
+	display: flex;
+	white-space: nowrap;
+	height: min-content;
+}
+
+.ConnectingNode .edge {
+	color: var(--text-color-2);
+}
+
+.ConnectingNode .dash {
+	color: var(--text-color-2);
+}

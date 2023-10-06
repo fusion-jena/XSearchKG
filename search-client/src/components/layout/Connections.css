@@ -1,0 +1,8 @@
+.Connections {
+	padding: 10px;
+	max-width: 90vw;
+}
+
+.Connections .node {
+	font-weight: bold;
+}
