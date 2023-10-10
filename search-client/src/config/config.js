@@ -3,7 +3,8 @@ const config = {
 		baseUrl: 'http://localhost:3001'
 	},
 	page: {
-		title: 'Explainable Keyword Search over Knowledge Graphs'
+		title: 'XSearchKG',
+		subtitle: 'A Platform for Explainable Keyword Search over Knowledge Graphs'
 	},
 	select: {
 		theme: (defaultTheme) => ({

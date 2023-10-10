@@ -4,5 +4,10 @@
 
 .Logo h1 {
 	margin-left: 5px;
-	font-weight: 200;
+	font-weight: 500;
+}
+
+.Logo .subtitle {
+	margin-top: 10px;
+	color: var(--text-color-2);
 }
