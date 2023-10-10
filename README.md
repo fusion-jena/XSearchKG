@@ -7,7 +7,8 @@
 
 The application consists of two fundamental building blocks: 
 - A Node.js Express server (backend) produces ranked results with essential information such as labels, descriptions, and subgraph bindings.
-- A React app (frontend) provides a user-friendly and responsive web interface. 
+- A React app (frontend) provides a user-friendly and responsive web interface.
+
 The application requires a running SPARQL endpoint and the files representing the summary graph generated at the first off-line phase of [Fed20](https://ceur-ws.org/Vol-2798/paper3.pdf).
 The routes of the backend are very lightweight, containing the [OpenAPI documentation](https://swagger.io/specification/).
 The routes are mapped to corresponding controllers. The latter uses a common set of services.
