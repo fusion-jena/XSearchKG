@@ -1,4 +1,5 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/fusion-jena/KeySearchWiki/blob/master/LICENSE)
+[![DOI](https://zenodo.org/badge/701345993.svg)](https://zenodo.org/badge/latestdoi/701345993)
 # XSearchKG: A Platform for Explainable Keyword Search over Knowledge Graphs
 
 :video_camera: [Demo Video](https://youtu.be/5YrTBR72hE0)
