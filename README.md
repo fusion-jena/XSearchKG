@@ -1,9 +1,11 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://github.com/fusion-jena/KeySearchWiki/blob/master/LICENSE)
 # XSearchKG: A Platform for Explainable Keyword Search over Knowledge Graphs
 
-:video_camera: [Demo Video]()
+:video_camera: [Demo Video](https://youtu.be/5YrTBR72hE0)
 
 ## System Architecture
+
+![approach!](figures/architecture.png)
 
 The application consists of two fundamental building blocks: 
 - A Node.js Express server (backend) produces ranked results with essential information such as labels, descriptions, and subgraph bindings.
