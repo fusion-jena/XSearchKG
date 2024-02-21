@@ -33,7 +33,7 @@ const config = {
 			cost_tripleFreq_normMaxMinCount
 			cost_tripleFreq_normTotalCount
 		*/
-		metricBetaValue: 0.5, // beta value used for the sim-tripple metric (0...1)
+		metricBetaValue: 0.5, // constant used in cost assignment for subgraph edges, its value is in ]0,1]
 		summary: path.join(__dirname, '..', '..', '/summary-graph/'), // file location: summary graph object
 	},
 	results: {
