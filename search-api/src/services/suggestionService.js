@@ -2,15 +2,19 @@ import { NamedNode, Variable } from 'rdf-data-factory';
 import config from '../config/config';
 import Query, { BgpPattern, FilterPattern, OperationExpression, OptionalPattern } from '../utils/Query';
 
-export const generateTargets = async (label, ...values) => {
-	return await generateSuggestions(SuggestionType.SchemaNode, config.targets.maxSuggestions, label, ...values);
+export const generateTargets = async (label, target) => {
+	const values = [];
+	if (typeof target !== 'undefined') {
+		values.push({ type: target });
+	}
+	return await generateSuggestions(SuggestionType.SchemaNode, config.targets.maxSuggestions, label, values);
 };
 
-export const generateKeywords = async (label, ...values) => {
-	return await generateSuggestions(SuggestionType.InstanceNode, config.keywords.maxSuggestions, label, ...values);
+export const generateKeywords = async (label, keywords) => {
+	return await generateSuggestions(SuggestionType.InstanceNode, config.keywords.maxSuggestions, label, keywords);
 };
 
-const generateSuggestions = async (suggestionType, limit, label, ...values) => {
+const generateSuggestions = async (suggestionType, limit, label, values) => {
 	const query = new Query();
 	query.addVariables('type');
 	if (suggestionType === SuggestionType.InstanceNode) {
@@ -22,8 +26,8 @@ const generateSuggestions = async (suggestionType, limit, label, ...values) => {
 		query.addWhereClause(OptionalPattern.createTwoVarOptional(suggestionType, config.queryGeneration.label, 'name'));
 		query.addWhereClause(nameFilter(label, suggestionType));
 	}
-	if (values.length > 0) {
-		query.bindVariable(suggestionType, values);
+	if (values?.length > 0) {
+		query.bindVariable(suggestionType, values.map(value => value[suggestionType]));
 	}
 	query.addWhereClause(FilterPattern.createBlankNodeFilter('iri'));
 	query.limit(limit);

@@ -17,11 +17,11 @@ const router = Router();
  *         required: false
  *         description: string to filter for labels and iris
  *       - in: query
- *         name: values
+ *         name: keywords
  *         schema:
- *           type: string
+ *           type: JSON array
  *         required: false
- *         description: IRI
+ *         description: list of keywords with iri and type
  *     responses:
  *       '200':
  *         description: OK

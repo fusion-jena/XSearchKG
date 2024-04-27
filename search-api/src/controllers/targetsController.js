@@ -4,13 +4,10 @@ import RequestConfig from '../utils/RequestConfig';
 
 const targetsController = async (req, res, next) => {
 	try {
-		const { label, values } = new RequestConfig(req);
-		console.debug(new Date().toISOString().slice(11, -1), 'targets', { label, values });
-		if (!label && !values) {
-			return [];
-		}
-		const targets = await generateTargets(label, ...values);
-		const enrichedTargets = await enrichTargets(targets);
+		const { label, target } = new RequestConfig(req);
+		console.debug(new Date().toISOString().slice(11, -1), 'targets', { label, target });
+		const generatedTargets = await generateTargets(label, target);
+		const enrichedTargets = await enrichTargets(generatedTargets);
 		const sortedTargets = enrichedTargets.sort((a, b) => a.label.localeCompare(b.label));
 		return res.json(sortedTargets);
 	} catch (error) {

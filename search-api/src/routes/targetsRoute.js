@@ -17,7 +17,7 @@ const router = Router();
  *         required: false
  *         description: string to filter for labels and iris
  *       - in: query
- *         name: values
+ *         name: target
  *         schema:
  *           type: string
  *         required: false

@@ -4,13 +4,13 @@ import RequestConfig from '../utils/RequestConfig';
 
 const keywordsController = async (req, res, next) => {
 	try {
-		const { label, values } = new RequestConfig(req);
-		console.debug(new Date().toISOString().slice(11, -1), 'keywords', { label, values });
-		if (!label && !values) {
+		const { label, keywords } = new RequestConfig(req);
+		console.debug(new Date().toISOString().slice(11, -1), 'keywords', { label, keywords });
+		if (!label && !keywords ) {
 			return [];
 		}
-		const keywords = await generateKeywords(label, ...values);
-		const enrichedKeywords = await enrichKeywords(keywords);
+		const generatedKeywords = await generateKeywords(label, keywords);
+		const enrichedKeywords = await enrichKeywords(generatedKeywords);
 		const sortedKeywords = enrichedKeywords.sort((a, b) => a.label.localeCompare(b.label));
 		return res.json(sortedKeywords);
 	} catch (error) {
@@ -21,7 +21,10 @@ const keywordsController = async (req, res, next) => {
 const enrichKeywords = async (keywords) => {
 	const enrichedKeywords = keywords.map(async (keyword) => ({
 		label: await name(keyword.iri) + ' (' + await name(keyword.type) + ')',
-		value: keyword.iri,
+		value: {
+			iri: keyword.iri,
+			type: keyword.type
+		}
 	}));
 	return Promise.all(enrichedKeywords);
 };

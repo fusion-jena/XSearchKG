@@ -56,8 +56,6 @@ class Query {
 		});
 	};
 
-	bindTarget = (iri) => this.bindVariable('target', iri);
-
 	limit = (limit) => {
 		this.query.limit = limit;
 	};

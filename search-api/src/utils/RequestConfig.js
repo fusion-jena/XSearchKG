@@ -9,12 +9,10 @@ class RequestConfig {
 		this.iri = iri(req);
 		this.page = page(req);
 		this.label = label(req);
-		this.values = values(req);
 	}
 }
 
-const keywords = (req) => req.query.keywords?.split(',')
-	.map(keyword => ({ iri: keyword })) || [];
+const keywords = (req) => req.query.keywords ? JSON.parse(req.query.keywords) : [];
 
 const target = (req) => req.query.target;
 
@@ -28,7 +26,5 @@ const iri = (req) => req.query.iri;
 const page = (req) => Number(req.query.page) || 0;
 
 const label = (req) => req.query.label;
-
-const values = (req) => req.query.values?.split(',') || [];
 
 export default RequestConfig;

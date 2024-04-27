@@ -1,6 +1,6 @@
 export const validateKeywords = (req, res, next) => {
-	const { keywords } = req.query;
-	if (keywords?.split(',').some(keyword => !isValidIri(keyword))) {
+	const keywords = req.query.keywords ? JSON.parse(req.query.keywords) : [];
+	if (keywords?.some(keyword => !isValidIri(keyword.iri)) || keywords?.some(keyword => !isValidIri(keyword.type))) {
 		return res.status(400).json({ message: 'keywords parameter is not valid' });
 	}
 	next();
