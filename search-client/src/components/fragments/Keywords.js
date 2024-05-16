@@ -12,7 +12,7 @@ const Keywords = ({ value, onChange, reference }) => {
 		const keywordValues = params.get('keywords') || '';
 		if (keywordValues) {
 			const newParams = new URLSearchParams();
-			newParams.set('values', keywordValues);
+			newParams.set('keywords', keywordValues);
 			const url = config.api.baseUrl + '/keywords?' + newParams;
 			fetch(url).then((response) => {
 				response.json().then(json => {

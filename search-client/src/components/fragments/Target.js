@@ -12,7 +12,7 @@ const Target = ({ value, onChange, reference, onMenuClose }) => {
 		const targetValue = params.get('target') || '';
 		if (targetValue) {
 			const newParams = new URLSearchParams();
-			newParams.set('values', targetValue);
+			newParams.set('target', targetValue);
 			const url = config.api.baseUrl + '/targets?' + newParams;
 			fetch(url).then((response) => {
 				response.json().then(json => {

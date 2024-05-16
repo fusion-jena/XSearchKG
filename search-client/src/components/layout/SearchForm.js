@@ -22,10 +22,9 @@ const SearchForm = () => {
 
 	const params = () => {
 		const params = new URLSearchParams();
-		const targetValue = target.value;
-		params.set('target', targetValue);
+		params.set('target', target.value);
 		if (keywords?.length > 0) {
-			params.set('keywords', keywords.map(keyword => keyword.value).join(','));
+			params.set('keywords', JSON.stringify(keywords.map(keyword => keyword.value)));
 		}
 		return params;
 	}
